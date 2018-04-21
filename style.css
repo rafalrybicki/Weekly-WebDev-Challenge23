@@ -353,6 +353,10 @@ header::after{
 	overflow: hidden;
 }
 
+.profile img:hover{
+	cursor: pointer;
+}
+
 /*C L I E N T -----------------------------------------------------------------------------------------*/
 
 .client{
