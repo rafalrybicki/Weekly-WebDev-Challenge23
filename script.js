@@ -5,6 +5,7 @@ const menuElements = Array.from(document.querySelectorAll('nav ul span'));
 const menuElementsOffsetY= [];
 const imageGallery = document.querySelector('.profile-box');
 const imageGalleryItems = Array.from(document.querySelectorAll('.profile-box img'));
+const logo = document.querySelector('.logo');
 
 let index, currentY;
 
@@ -23,6 +24,15 @@ window.onload = () => {
 window.addEventListener('resize', ()=> innerWidth>=992 ? menuItems.forEach((el)=> el.style.opacity = 1) : "");
 window.addEventListener('scroll', watchMenu);
 
+logo.addEventListener('click', (e)=>{
+	e.preventDefault();
+	let currentY = window.pageYOffset;
+	const animator = setInterval(()=>{
+		scroll(0, currentY-70);
+		scrollY == 0 ? clearInterval(animator) : "";
+		currentY = window.pageYOffset;
+	}, 10)
+});
 menuButton.addEventListener('click', menuToggle);
 menuButton.addEventListener('click', menuButtonChange);
 menuItems.forEach((el) => el.addEventListener('click', smoothScroll));
