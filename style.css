@@ -615,7 +615,7 @@ footer .social a{
 }
 
 footer .social a:hover{
-	border-color: yellow;
+	border-color: #0081ff;
 }
 
 footer .social a:nth-child(1){
