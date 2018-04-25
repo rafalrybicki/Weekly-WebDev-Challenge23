@@ -1,3 +1,4 @@
+const nav = document.querySelector('nav');
 const menuButton = document.querySelector('nav button');
 const menu = document.querySelector('.menu');
 const menuItems = document.querySelectorAll('.menu li a');
@@ -201,7 +202,7 @@ function lightbox(e){
 	
 function watchMenu(){
 	
-	currentY = Math.round(scrollY + (innerHeight/10)); 
+	currentY = scrollY + nav.offsetHeight; 
 	
 	if(currentY >= menuElementsOffsetY[index+1]){
 		menuElements[index].classList.remove('active');
