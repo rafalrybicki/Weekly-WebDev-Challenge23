@@ -83,7 +83,7 @@ function smoothScroll(e) {
    const distance = 20;
    const speed = 10;
    const jumpTo = this.getAttribute('href');
-   const targetY = document.querySelector(jumpTo).offsetTop - (innerHeight / 10);
+   const targetY = document.querySelector(jumpTo).offsetTop - nav.offsetHeight;
    let currentY = window.pageYOffset;
 
    const animator = setInterval(scrollTo, speed); 
